@@ -1,5 +1,5 @@
 version: 1.6.{build}
-os: Visual Studio 2015 RC
+os: Visual Studio 2015
 init:
 - git config --global core.autocrlf true
 assembly_info:
@@ -21,11 +21,3 @@ build:
   publish_nuget_symbols: true
   include_nuget_references: true
   verbosity: minimal
-notifications:
-- provider: Webhook
-  url: http://stats.zomis.net:8081/hooks/appveyor?roomId=14929
-  headers:
-    X-Duga-Event: duga42
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: true
